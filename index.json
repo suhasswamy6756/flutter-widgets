@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "widgets": [
+    {
+      "id": "app-button",
+      "name": "App Button",
+      "slug": "app-button",
+      "category": "Buttons",
+      "description": "A reusable Flutter button.",
+      "path": "widgets/buttons/app-button"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "app-button",
+  "name": "App Button",
+  "slug": "app-button",
+  "category": "Buttons",
+  "description": "A reusable Flutter button with configurable text, colors, size, radius and loading state.",
+  "version": "1.0.0",
+  "parameters": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "Button",
+      "required": true,
+      "description": "Text displayed inside the button."
+    },
+    {
+      "name": "width",
+      "type": "double",
+      "defaultValue": 200,
+      "description": "Width of the button."
+    },
+    {
+      "name": "height",
+      "type": "double",
+      "defaultValue": 50,
+      "description": "Height of the button."
+    },
+    {
+      "name": "borderRadius",
+      "type": "double",
+      "defaultValue": 12,
+      "description": "Border radius of the button."
+    },
+    {
+      "name": "isLoading",
+      "type": "bool",
+      "defaultValue": false,
+      "description": "Displays a loading indicator."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "color",
+      "defaultValue": "#2196F3",
+      "description": "Background color of the button."
+    }
+  ],
+  "dependencies": [],
+  "author": {
+    "name": "Suhas",
+    "github": "YOUR_GITHUB_USERNAME"
+  }
+}
