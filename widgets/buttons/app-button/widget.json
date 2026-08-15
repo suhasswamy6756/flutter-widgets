@@ -45,8 +45,11 @@
     }
   ],
   "dependencies": [],
-  "author": {
-    "name": "Suhas",
-    "github": "YOUR_GITHUB_USERNAME"
-  }
+
+"code": "AppButton(\n  text: 'Button',\n  width: 200,\n  height: 50,\n  borderRadius: 12,\n  isLoading: false,\n  backgroundColor: Colors.blue,\n),",
+
+"author": {
+  "name": "Suhas",
+  "github": "suhasswamy6756"
+}
 }
