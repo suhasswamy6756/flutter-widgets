@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flutter-widgets.example.com/schema/widget.schema.json",
+  "title": "Flutter Widget",
+  "description": "Schema for reusable Flutter widget metadata.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "slug",
+    "category",
+    "description",
+    "version",
+    "parameters",
+    "dependencies",
+    "author"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "android",
+          "ios",
+          "web",
+          "windows",
+          "macos",
+          "linux"
+        ]
+      }
+    },
+
+    "files": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "readme": {
+          "type": "string"
+        },
+        "examples": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "readme"
+      ]
+    },
+
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/parameter"
+      }
+    },
+
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "file"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "author": {
+      "$ref": "#/$defs/author"
+    },
+
+    "repository": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+
+        "type": {
+          "type": "string",
+          "enum": [
+            "string",
+            "int",
+            "double",
+            "bool",
+            "color",
+            "enum",
+            "duration",
+            "list",
+            "code",
+            "callback"
+          ]
+        },
+
+        "required": {
+          "type": "boolean"
+        },
+
+        "defaultValue": {},
+
+        "description": {
+          "type": "string"
+        },
+
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "ui": {
+          "type": "object",
+          "properties": {
+            "control": {
+              "type": "string",
+              "enum": [
+                "text",
+                "number",
+                "switch",
+                "color",
+                "select",
+                "slider",
+                "code",
+                "none"
+              ]
+            },
+
+            "min": {
+              "type": "number"
+            },
+
+            "max": {
+              "type": "number"
+            },
+
+            "step": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+
+    "author": {
+      "type": "object",
+      "required": [
+        "name",
+        "github"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "github": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

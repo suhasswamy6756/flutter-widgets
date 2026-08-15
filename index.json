@@ -1,13 +1,86 @@
 {
   "version": 1,
+  "updatedAt": "2026-08-15T00:00:00Z",
   "widgets": [
     {
       "id": "app-button",
       "name": "App Button",
       "slug": "app-button",
       "category": "Buttons",
-      "description": "A reusable Flutter button.",
-      "path": "widgets/buttons/app-button"
+      "description": "A production-ready reusable Flutter button supporting Material and Cupertino platforms.",
+      "path": "widgets/buttons/app-button",
+      "version": "1.0.0",
+      "tags": [
+        "button",
+        "material",
+        "cupertino",
+        "loading",
+        "icon"
+      ],
+      "platforms": [
+        "android",
+        "ios",
+        "web",
+        "macos"
+      ],
+      "author": {
+        "name": "Suhas",
+        "github": "suhasswamy6756"
+      },
+      "preview": "widgets/buttons/app-button/preview.png"
+    },
+
+    {
+      "id": "app-text-field",
+      "name": "App Text Field",
+      "slug": "app-text-field",
+      "category": "Inputs",
+      "description": "A reusable Flutter text field with validation, icons and customization support.",
+      "path": "widgets/inputs/app-text-field",
+      "version": "1.0.0",
+      "tags": [
+        "input",
+        "textfield",
+        "form",
+        "validation"
+      ],
+      "platforms": [
+        "android",
+        "ios",
+        "web",
+        "macos"
+      ],
+      "author": {
+        "name": "Suhas",
+        "github": "suhasswamy6756"
+      },
+      "preview": "widgets/inputs/app-text-field/preview.png"
+    },
+
+    {
+      "id": "app-card",
+      "name": "App Card",
+      "slug": "app-card",
+      "category": "Cards",
+      "description": "A reusable Flutter card component with flexible styling and content support.",
+      "path": "widgets/cards/app-card",
+      "version": "1.0.0",
+      "tags": [
+        "card",
+        "container",
+        "ui"
+      ],
+      "platforms": [
+        "android",
+        "ios",
+        "web",
+        "macos"
+      ],
+      "author": {
+        "name": "Suhas",
+        "github": "suhasswamy6756"
+      },
+      "preview": "widgets/cards/app-card/preview.png"
     }
   ]
 }

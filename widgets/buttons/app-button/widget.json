@@ -1,55 +1,192 @@
 {
+  "schemaVersion": 1,
+
   "id": "app-button",
   "name": "App Button",
   "slug": "app-button",
+
   "category": "Buttons",
-  "description": "A reusable Flutter button with configurable text, colors, size, radius and loading state.",
+
+  "description": "A production-ready reusable Flutter button supporting Material and Cupertino platforms.",
+
   "version": "1.0.0",
+
+  "tags": [
+    "button",
+    "material",
+    "cupertino",
+    "loading",
+    "icon",
+    "responsive"
+  ],
+
+  "platforms": [
+    "android",
+    "ios",
+    "web",
+    "macos"
+  ],
+
+  "files": {
+    "source": "app_button.dart",
+    "readme": "README.md",
+    "examples": "examples"
+  },
+
   "parameters": [
     {
-      "name": "text",
+      "name": "label",
       "type": "string",
-      "defaultValue": "Button",
       "required": true,
-      "description": "Text displayed inside the button."
+      "defaultValue": "Button",
+      "description": "Text displayed inside the button.",
+      "ui": {
+        "control": "text"
+      }
     },
+
     {
-      "name": "width",
-      "type": "double",
-      "defaultValue": 200,
-      "description": "Width of the button."
+      "name": "variant",
+      "type": "enum",
+      "required": false,
+      "defaultValue": "primary",
+      "options": [
+        "primary",
+        "secondary",
+        "outline",
+        "ghost",
+        "danger"
+      ],
+      "description": "Visual style of the button.",
+      "ui": {
+        "control": "select"
+      }
     },
-    {
-      "name": "height",
-      "type": "double",
-      "defaultValue": 50,
-      "description": "Height of the button."
-    },
-    {
-      "name": "borderRadius",
-      "type": "double",
-      "defaultValue": 12,
-      "description": "Border radius of the button."
-    },
+
     {
       "name": "isLoading",
       "type": "bool",
       "defaultValue": false,
-      "description": "Displays a loading indicator."
+      "description": "Shows a loading indicator instead of the button content.",
+      "ui": {
+        "control": "switch"
+      }
     },
+
+    {
+      "name": "enabled",
+      "type": "bool",
+      "defaultValue": true,
+      "description": "Controls whether the button can be pressed.",
+      "ui": {
+        "control": "switch"
+      }
+    },
+
+    {
+      "name": "expand",
+      "type": "bool",
+      "defaultValue": true,
+      "description": "Expands the button to fill the available width.",
+      "ui": {
+        "control": "switch"
+      }
+    },
+
+    {
+      "name": "borderRadius",
+      "type": "double",
+      "defaultValue": 14,
+      "description": "Controls the button corner radius.",
+      "ui": {
+        "control": "slider",
+        "min": 0,
+        "max": 40,
+        "step": 1
+      }
+    },
+
     {
       "name": "backgroundColor",
       "type": "color",
-      "defaultValue": "#2196F3",
-      "description": "Background color of the button."
+      "defaultValue": null,
+      "description": "Custom background color.",
+      "ui": {
+        "control": "color"
+      }
+    },
+
+    {
+      "name": "foregroundColor",
+      "type": "color",
+      "defaultValue": null,
+      "description": "Custom foreground/text color.",
+      "ui": {
+        "control": "color"
+      }
+    },
+
+    {
+      "name": "borderColor",
+      "type": "color",
+      "defaultValue": null,
+      "description": "Custom border color.",
+      "ui": {
+        "control": "color"
+      }
+    },
+
+    {
+      "name": "elevation",
+      "type": "double",
+      "defaultValue": null,
+      "description": "Elevation of the Material button.",
+      "ui": {
+        "control": "slider",
+        "min": 0,
+        "max": 20,
+        "step": 1
+      }
     }
   ],
+
   "dependencies": [],
 
-"code": "AppButton(\n  text: 'Button',\n  width: 200,\n  height: 50,\n  borderRadius: 12,\n  isLoading: false,\n  backgroundColor: Colors.blue,\n),",
+  "examples": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "file": "examples/basic.dart"
+    },
+    {
+      "id": "variants",
+      "name": "Variants",
+      "file": "examples/variants.dart"
+    },
+    {
+      "id": "loading",
+      "name": "Loading",
+      "file": "examples/loading.dart"
+    },
+    {
+      "id": "icons",
+      "name": "Icons",
+      "file": "examples/icons.dart"
+    },
+    {
+      "id": "customization",
+      "name": "Customization",
+      "file": "examples/customization.dart"
+    }
+  ],
 
-"author": {
-  "name": "Suhas",
-  "github": "suhasswamy6756"
-}
+  "author": {
+    "name": "Suhas",
+    "github": "suhasswamy6756"
+  },
+
+  "repository": {
+    "type": "github",
+    "path": "widgets/buttons/app-button"
+  }
 }
